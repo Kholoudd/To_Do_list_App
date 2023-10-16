@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:to_do/core/theme/applicationTheme.dart';
 import 'package:to_do/layout/HomeLayout.dart';
-import 'package:to_do/pages/homePage.dart';
 import 'package:to_do/pages/splashScreen.dart';
 
 void main() {
@@ -15,11 +15,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ApplicationTheme.lightTheme,
       initialRoute: SplashScreen.routeName,
       routes: {
         SplashScreen.routeName: (context) => SplashScreen(),
         HomeLayout.routeName: (context) => HomeLayout(),
-        HomePage.routeName: (context) => HomePage(),
       },
       home: SplashScreen(),
     );

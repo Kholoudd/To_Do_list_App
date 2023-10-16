@@ -1,32 +1,32 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:to_do/layout/HomeLayout.dart';
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatefulWidget {
   static const String routeName = "splashScreen";
 
   const SplashScreen({super.key});
 
-  Widget build(BuildContext context) {
-    final mediaquary = MediaQuery.of(context).size;
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  void initState() {
     Timer(Duration(seconds: 3), () {
       Navigator.pushReplacementNamed(context, HomeLayout.routeName);
     });
+    super.initState();
+  }
+
+  Widget build(BuildContext context) {
+    final mediaquary = MediaQuery.of(context).size;
     return Scaffold(
-      body:
-          // Image.asset("assets/images/splashscreen.png" ,
-          //   width:mediaquary.width,
-          //   height:mediaquary.width ,
-          //   fit:BoxFit.cover,)
-          Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            "SplashScreen",
-            style: TextStyle(fontSize: 40),
-          ),
-        ],
+      body: Image.asset(
+        "asset/images/splash.jpg",
+        width: mediaquary.width,
+        height: mediaquary.height,
+        fit: BoxFit.cover,
       ),
     );
   }

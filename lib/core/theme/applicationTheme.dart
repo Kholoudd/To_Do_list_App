@@ -11,7 +11,7 @@ class ApplicationTheme {
       seedColor: primaryColor,
       onPrimary: primaryColor,
       onSecondary: const Color(0xFFDFECDB),
-      primary: const Color(0xFFB7935F),
+      // primary: const Color(0xFFB7935F),
       background: Colors.white,
     ),
     appBarTheme: AppBarTheme(
@@ -19,10 +19,11 @@ class ApplicationTheme {
       backgroundColor: primaryColor,
       elevation: 0.0,
       centerTitle: false,
+      toolbarHeight: 100,
       titleTextStyle: GoogleFonts.poppins(
         fontSize: 30,
         fontWeight: FontWeight.bold,
-        color: Colors.black,
+        color: Colors.white,
       ),
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
@@ -61,13 +62,16 @@ class ApplicationTheme {
           fontWeight: FontWeight.normal,
           color: Colors.black,
         )),
+    cardTheme: CardTheme(
+      color: primaryColor,
+    ),
     floatingActionButtonTheme: FloatingActionButtonThemeData(
       backgroundColor: primaryColor,
     ),
     // bottomSheetTheme: BottomSheetThemeData(
     //   backgroundColor: const Color(0xFFB7935F).withOpacity(0.7),
     // ),
-    dividerColor: const Color(0xFFB7935F),
+    // dividerColor: const Color(0xFFB7935F),
   );
 
   static ThemeData darkTheme = ThemeData(
